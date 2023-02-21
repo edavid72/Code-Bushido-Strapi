@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mangas",
+  "info": {
+    "singularName": "manga",
+    "pluralName": "mangas",
+    "displayName": "mangas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "mangaka": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
